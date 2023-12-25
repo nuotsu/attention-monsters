@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
-import { TfiLayoutCtaCenter } from 'react-icons/tfi'
+import { TfiLayoutCtaLeft } from 'react-icons/tfi'
+import { getBlockText } from '../../src/utils'
 
 export default defineType({
-	name: 'hero.centered',
-	title: 'Hero (centered)',
-	icon: TfiLayoutCtaCenter,
+	name: 'hero.home',
+	title: 'Hero (Homepage)',
+	icon: TfiLayoutCtaLeft,
 	type: 'object',
 	fields: [
 		defineField({
@@ -22,12 +23,10 @@ export default defineType({
 	preview: {
 		select: {
 			content: 'content',
-			media: 'image.asset',
 		},
-		prepare: ({ content, media }) => ({
-			title: content[0]?.children[0]?.text,
+		prepare: ({ content }) => ({
+			title: getBlockText(content),
 			subtitle: 'Hero (centered)',
-			media,
 		}),
 	},
 })

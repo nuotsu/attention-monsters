@@ -14,5 +14,10 @@ export default defineType({
 			type: 'array',
 			of: [{ type: 'link' }, { type: 'link.list' }],
 		}),
+		defineField({
+			name: 'social',
+			type: 'array',
+			of: [{ type: 'url' }],
+		}),
 	],
 })

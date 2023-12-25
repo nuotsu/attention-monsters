@@ -9,8 +9,7 @@ import linkList from './objects/link.list'
 import metadata from './objects/metadata'
 
 // modules
-import heroCentered from './modules/hero.centered'
-import heroPostcard from './modules/hero.postcard'
+import heroHome from './modules/hero.home'
 
 export const schemaTypes = [
 	// documents
@@ -24,6 +23,5 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
-	heroCentered,
-	heroPostcard,
+	heroHome,
 ]

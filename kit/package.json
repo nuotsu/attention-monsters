@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@portabletext/svelte": "^2.1.5",
 		"@portabletext/types": "^2.0.8",
 		"@sanity/client": "^6.10.0",
 		"@sanity/types": "^3.23.4",

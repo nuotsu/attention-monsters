@@ -12,7 +12,7 @@ export default defineType({
 		defineField({
 			name: 'modules',
 			type: 'array',
-			of: [{ type: 'hero.centered' }, { type: 'hero.postcard' }],
+			of: [{ type: 'hero.home' }],
 		}),
 		defineField({
 			name: 'metadata',

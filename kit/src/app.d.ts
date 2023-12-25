@@ -17,11 +17,12 @@ declare global {
 		type Site = SanityDocument & {
 			title: string
 			menu: (Link | LinkList)[]
+			social: string[]
 		}
 
 		type Page = SanityDocument & {
 			title: string
-			modules: any[]
+			modules?: Module[]
 			metdata: Metadata
 		}
 
@@ -47,6 +48,11 @@ declare global {
 			slug: {
 				current: string
 			}
+		}
+
+		type Module = {
+			_type: string
+			_key: string
 		}
 	}
 }
