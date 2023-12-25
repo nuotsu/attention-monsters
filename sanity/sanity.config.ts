@@ -15,7 +15,7 @@ const singletonTypes = ['site']
 
 export default defineConfig({
 	name: 'default',
-	title: 'Next.js + Sanity Template',
+	title: 'Attention Monsters',
 
 	projectId: '6qmz2lrb',
 	dataset: 'production',
