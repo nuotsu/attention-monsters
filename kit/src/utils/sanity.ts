@@ -11,4 +11,5 @@ export const client = createClient({
 	apiVersion: '2023-12-25',
 	useCdn: !dev,
 	token: PUBLIC_SANITY_TOKEN,
+	perspective: dev ? 'previewDrafts' : 'published',
 })

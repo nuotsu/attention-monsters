@@ -1,4 +1,4 @@
-import { client } from '$lib/sanity'
+import { client } from '../utils/sanity'
 import groq from 'groq'
 import type { LayoutServerLoad } from './$types'
 

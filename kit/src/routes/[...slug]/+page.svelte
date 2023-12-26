@@ -1,15 +1,13 @@
-{#each data.page.modules || [] as module (module._type)}
-	{#if module._type === 'hero.home'}
-		<HeroHome {...module} />
-	{:else}
-		<div data-type={module._type} />
-	{/if}
-{/each}
+<svelte:head>
+	<title>{data.page.metadata.title}</title>
+	<meta name="description" content={data.page.metadata.description} />
+</svelte:head>
+
+<Modules modules={data.page.modules} />
 
 <script lang="ts">
+	import Modules from '$lib/modules/Modules.svelte'
 	import type { PageServerData } from './$types'
-
-	import HeroHome from '$lib/modules/HeroHome.svelte'
 
 	export let data: PageServerData
 </script>

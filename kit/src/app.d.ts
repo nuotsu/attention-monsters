@@ -28,12 +28,17 @@ declare global {
 
 		// objects
 
+		type CTA = {
+			link: Link
+			style: 'action' | 'link'
+		}
+
 		type Link = {
 			_type: 'link'
 			label: string
 			type: 'internal' | 'external'
-			internal: Page
-			exernal: string
+			internal?: Page
+			external?: string
 		}
 
 		type LinkList = {

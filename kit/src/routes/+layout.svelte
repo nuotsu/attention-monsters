@@ -1,16 +1,13 @@
-<header>
-	<a href="/">{data.site.title}</a>
-</header>
+<Header />
 
-<slot />
+<main class="grow">
+	<slot />
+</main>
 
-<footer>
-	<p>&copy; {new Date().getFullYear()}</p>
-</footer>
+<Footer />
 
 <script lang="ts">
-	import type { LayoutServerData } from './$types'
+	import Header from '$lib/header/Header.svelte'
+	import Footer from '$lib/footer/Footer.svelte'
 	import '../styles/app.css'
-
-	export let data: LayoutServerData
 </script>
