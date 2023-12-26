@@ -23,7 +23,7 @@ declare global {
 		type Page = SanityDocument & {
 			title: string
 			modules?: Module[]
-			metdata: Metadata
+			metadata: Metadata
 		}
 
 		// objects

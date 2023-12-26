@@ -5,9 +5,7 @@
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte'
 
-	const { content } = $props<
-		Sanity.Module & {
-			content?: any
-		}
-	>()
+	const { content } = $$props as Partial<{
+		content: any
+	}>
 </script>

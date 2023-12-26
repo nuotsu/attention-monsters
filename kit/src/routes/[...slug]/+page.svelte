@@ -1,4 +1,4 @@
-{#each data.page.modules || [] as module (module._key)}
+{#each data.page.modules || [] as module (module._type)}
 	{#if module._type === 'hero.home'}
 		<HeroHome {...module} />
 	{:else}
