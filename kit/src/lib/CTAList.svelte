@@ -10,8 +10,8 @@
 	import CTA from './CTA.svelte'
 	import { twMerge } from 'tailwind-merge'
 
-	const { ctas, className } = $$props as {
+	const { ctas, class: className } = $$props as {
 		ctas?: Sanity.CTA[]
-		className?: string
+		class?: string
 	}
 </script>

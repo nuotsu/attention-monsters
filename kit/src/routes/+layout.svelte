@@ -1,6 +1,6 @@
 <Header />
 
-<main class="grow relative z-[1] after:block">
+<main class="grow relative z-[1] bg-black after:block">
 	<slot />
 </main>
 
@@ -8,7 +8,7 @@
 
 <style lang="postcss">
 	main::after {
-		@apply h-8 bg-gradient-to-b from-black to-transparent;
+		@apply absolute inset-x-0 top-full h-8 bg-gradient-to-b from-black to-transparent;
 	}
 </style>
 

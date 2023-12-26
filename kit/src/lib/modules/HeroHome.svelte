@@ -1,5 +1,5 @@
 <section
-	class="relative grid items-end min-h-[calc(100dvh-var(--header-height))]"
+	class="relative grid items-end min-h-[calc(100svh-var(--header-height))]"
 >
 	<Img
 		class="absolute inset-0 before:top-0 after:bottom-0"
@@ -17,7 +17,7 @@
 				<p class="technical text-xs">{pretitle}</p>
 			{/if}
 			<PortableText value={content} components={{}} />
-			<CTAList {ctas} />
+			<CTAList {ctas} class="!mt-4" />
 		</div>
 	</div>
 </section>
@@ -36,6 +36,13 @@
 		& :global(picture::after) {
 			@apply bg-gradient-to-t;
 		}
+	}
+
+	.richtext {
+		text-shadow:
+			0 0.25em 0.25em #0004,
+			0 0.5em 0.5em #0008,
+			0 0.75em 0.75em #000;
 	}
 </style>
 

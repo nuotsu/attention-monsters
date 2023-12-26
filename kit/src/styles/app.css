@@ -65,7 +65,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		@apply _btn bg-black border-current font-serif;
+		@apply _btn border-current bg-black/20 backdrop-blur-sm font-serif;
 	}
 
 	.link {
@@ -105,6 +105,17 @@
 
 		& h2 {
 			@apply h6;
+		}
+	}
+
+	.carousel {
+		display: flex;
+		scroll-snap-type: x mandatory;
+		overflow-x: auto;
+
+		&>* {
+			scroll-snap-align: center;
+			flex: 0 0 var(--size, min(80vw, 300px));
 		}
 	}
 }

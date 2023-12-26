@@ -10,6 +10,7 @@ import metadata from './objects/metadata'
 
 // modules
 import heroHome from './modules/hero.home'
+import embeddedPlayer, { embeddedPlayerItem } from './modules/embedded-player'
 
 export const schemaTypes = [
 	// documents
@@ -23,5 +24,7 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
+	embeddedPlayer,
+	embeddedPlayerItem,
 	heroHome,
 ]
