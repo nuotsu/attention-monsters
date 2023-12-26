@@ -11,8 +11,8 @@
 		draggable={false}
 	/>
 
-	<div class="relative section w-full">
-		<div class="max-w-md richtext [&_h1]:text-pretty">
+	<div class="relative section w-full max-md:before:backdrop-blur">
+		<div class="max-w-md richtext drop-shadow-xl [&_h1]:text-pretty">
 			{#if pretitle}
 				<p class="technical text-xs">{pretitle}</p>
 			{/if}
@@ -38,11 +38,10 @@
 		}
 	}
 
-	.richtext {
-		text-shadow:
-			0 0.25em 0.25em #0004,
-			0 0.5em 0.5em #0008,
-			0 0.75em 0.75em #000;
+	.section::before {
+		position: absolute;
+		inset: -3rem 0 0 0;
+		mask-image: linear-gradient(to top, #000e 50%, transparent);
 	}
 </style>
 

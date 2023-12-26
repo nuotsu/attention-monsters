@@ -11,8 +11,11 @@
 
 <style lang="postcss">
 	header::after {
-		mask-image: linear-gradient(to bottom, #000, transparent);
-		@apply absolute inset-0 -bottom-8 z-[-1];
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		inset: 0 0 -3rem;
+		mask-image: linear-gradient(to bottom, #000 10%, transparent);
 	}
 </style>
 
