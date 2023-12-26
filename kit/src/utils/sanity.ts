@@ -3,7 +3,7 @@ import {
 	PUBLIC_SANITY_PROJECT_ID,
 	PUBLIC_SANITY_TOKEN,
 } from '$env/static/public'
-import { dev } from '$app/environment'
+import dev from '$utils/env'
 import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 

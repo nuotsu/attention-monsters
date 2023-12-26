@@ -20,7 +20,7 @@ const defaultDocumentNode: DefaultDocumentNodeResolver = (
 							const path = slug === 'index' ? '' : `/${slug}`
 							return dev
 								? `http://localhost:5173/${path}`
-								: `https://attention-monsters.vercel.app/${path}`
+								: `https://staging--attention-monsters.vercel.app/${path}`
 						},
 						reload: {
 							button: true,
