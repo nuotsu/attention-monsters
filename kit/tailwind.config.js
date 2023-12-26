@@ -3,9 +3,7 @@ export default {
 	content: ['./src/**/*.{html,svelte}'],
 	theme: {
 		extend: {
-			colors: {
-				accent: '#603008',
-			},
+			colors: {},
 			fontFamily: {
 				serif: `'Instrument Serif', serif`,
 			},

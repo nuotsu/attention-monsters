@@ -1,3 +1,4 @@
+import type { SanityAssetDocument } from '@sanity/client'
 import type { SanityDocument } from '@sanity/types'
 
 // See https://kit.svelte.dev/docs/types#app
@@ -31,6 +32,10 @@ declare global {
 		type CTA = {
 			link: Link
 			style: 'action' | 'link'
+		}
+
+		type Image = SanityAssetDocument & {
+			alt?: string
 		}
 
 		type Link = {

@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+	:root {
+		--header-height: 0px;
+	}
+
 	html {
 		background: #000;
 		color: #fff;
@@ -24,18 +28,54 @@
 		@apply _h text-4xl;
 	}
 
+	.h2 {
+		@apply _h text-3xl;
+	}
+
+	.h3 {
+		@apply _h text-2xl;
+	}
+
+	.h4 {
+		@apply _h text-xl;
+	}
+
+	.h5 {
+		@apply _h text-lg;
+	}
+
+	.h6 {
+		@apply _h;
+	}
+
+	.technical {
+		text-transform: uppercase;
+		letter-spacing: .1em;
+	}
+
 	/* CTAs */
 
 	._btn {
 		padding: .25em .75em;
+		@apply border-[.5px] border-transparent;
 	}
 
 	.action {
-		@apply _btn inline-flex bg-accent;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@apply _btn bg-black border-current font-serif;
 	}
 
 	.link {
 		text-decoration: underline;
+	}
+
+	/* layout */
+
+	.section {
+		@apply max-w-screen-xl mx-auto p-8 py-12 max-md:px-4;
 	}
 }
 
@@ -45,6 +85,26 @@
 
 		& h1 {
 			@apply h1;
+		}
+
+		& h2 {
+			@apply h2;
+		}
+
+		& h2 {
+			@apply h3;
+		}
+
+		& h2 {
+			@apply h4;
+		}
+
+		& h2 {
+			@apply h5;
+		}
+
+		& h2 {
+			@apply h6;
 		}
 	}
 }
