@@ -2,15 +2,15 @@
 	{#each $page.data.site.social as social}
 		<a class="transition-opacity" href={social}>
 			{#if social.includes('spotify')}
-				spotify
+				Spotify
 			{:else if social.includes('apple')}
-				apple
+				Apple
 			{:else if social.includes('youtube')}
-				yt
+				YouTube
 			{:else if social.includes('instagram')}
-				ig
+				Instagram
 			{:else if social.includes('tiktok')}
-				tiktok
+				TikTok
 			{/if}
 		</a>
 	{/each}
