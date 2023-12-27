@@ -5,7 +5,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://attention-monsters.vercel.app" />
+	<meta property="og:url" content="https://attentionmonsters.com" />
 	{#if ogimage}
 		<meta property="og:image" content={urlFor(ogimage).url()} />
 	{/if}
