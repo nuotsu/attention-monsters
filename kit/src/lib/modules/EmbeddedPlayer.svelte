@@ -1,11 +1,13 @@
-<section class="section grid grid-cols-2 gap-4 md:gap-8 max-md:carousel">
-	{#each items as item}
-		<article class="shrink-0" style="--size: min(88vw, 300px)">
-			<h2 class="sr-only">{item.title}</h2>
+<section class="relative">
+	<div class="section grid grid-cols-2 gap-4 md:gap-8 max-md:carousel">
+		{#each items as item}
+			<article class="shrink-0" style="--size: min(88vw, 300px)">
+				<h2 class="sr-only">{item.title}</h2>
 
-			{@html item.code}
-		</article>
-	{/each}
+				{@html item.code}
+			</article>
+		{/each}
+	</div>
 </section>
 
 <script lang="ts">

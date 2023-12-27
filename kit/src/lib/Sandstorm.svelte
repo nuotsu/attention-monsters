@@ -3,7 +3,7 @@
 <style>
 	aside {
 		pointer-events: none;
-		position: fixed;
+		position: absolute;
 		inset: 0;
 		z-index: 20;
 		background: url(/noise.png) top left / 150px repeat;

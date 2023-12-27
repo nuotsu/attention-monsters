@@ -1,4 +1,3 @@
-<Sandstorm />
 <Header />
 
 <main class="grow relative z-[1] bg-black after:block">
@@ -29,7 +28,6 @@
 </style>
 
 <script lang="ts">
-	import Sandstorm from '$lib/Sandstorm.svelte'
 	import Header from '$lib/header/Header.svelte'
 	import Footer from '$lib/footer/Footer.svelte'
 	import '../styles/app.css'
