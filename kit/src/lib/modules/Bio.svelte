@@ -11,7 +11,9 @@
 		</swiper-container>
 	</figure>
 
-	<div class="richtext [&_em]:text-gradient [&_em]:bg-gradient-to-r">
+	<div
+		class="max-w-lg mx-auto richtext [&_em]:text-gradient [&_em]:bg-gradient-to-r"
+	>
 		<PortableText value={content} components={{}} />
 	</div>
 </section>
