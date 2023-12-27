@@ -20,6 +20,7 @@ declare global {
 			logo: Image
 			menu: (Link | LinkList)[]
 			social: string[]
+			ogimage: Image
 		}
 
 		type Page = SanityDocument & {

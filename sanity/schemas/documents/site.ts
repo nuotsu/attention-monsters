@@ -23,5 +23,10 @@ export default defineType({
 			type: 'array',
 			of: [{ type: 'url' }],
 		}),
+		defineField({
+			name: 'ogimage',
+			title: 'Open Graph image',
+			type: 'image',
+		}),
 	],
 })
