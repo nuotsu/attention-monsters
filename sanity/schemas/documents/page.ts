@@ -12,7 +12,7 @@ export default defineType({
 		defineField({
 			name: 'modules',
 			type: 'array',
-			of: [{ type: 'hero.home' }, { type: 'embedded-player' }],
+			of: [{ type: 'bio' }, { type: 'hero.home' }, { type: 'embedded-player' }],
 		}),
 		defineField({
 			name: 'metadata',

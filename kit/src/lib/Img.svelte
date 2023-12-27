@@ -15,7 +15,13 @@
 			<source {srcset} {media} />
 		{/if}
 
-		<img class={imgClass} {src} alt={image.alt || ''} {...rest} />
+		<img
+			class={imgClass}
+			{src}
+			alt={image.alt || ''}
+			loading="lazy"
+			{...rest}
+		/>
 	</picture>
 {/if}
 

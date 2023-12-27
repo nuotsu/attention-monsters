@@ -1,5 +1,7 @@
 {#each modules || [] as module (module._type)}
-	{#if module._type === 'embedded-player'}
+	{#if module._type === 'bio'}
+		<Bio {...module} />
+	{:else if module._type === 'embedded-player'}
 		<EmbeddedPlayer {...module} />
 	{:else if module._type === 'hero.home'}
 		<HeroHome {...module} />
@@ -9,6 +11,7 @@
 {/each}
 
 <script lang="ts">
+	import Bio from './Bio.svelte'
 	import EmbeddedPlayer from './EmbeddedPlayer.svelte'
 	import HeroHome from './HeroHome.svelte'
 

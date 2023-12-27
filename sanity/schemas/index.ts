@@ -9,8 +9,9 @@ import linkList from './objects/link.list'
 import metadata from './objects/metadata'
 
 // modules
-import heroHome from './modules/hero.home'
+import bio from './modules/bio'
 import embeddedPlayer, { embeddedPlayerItem } from './modules/embedded-player'
+import heroHome from './modules/hero.home'
 
 export const schemaTypes = [
 	// documents
@@ -24,6 +25,7 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
+	bio,
 	embeddedPlayer,
 	embeddedPlayerItem,
 	heroHome,

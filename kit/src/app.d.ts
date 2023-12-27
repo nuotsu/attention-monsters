@@ -17,6 +17,7 @@ declare global {
 
 		type Site = SanityDocument & {
 			title: string
+			logo: Image
 			menu: (Link | LinkList)[]
 			social: string[]
 		}

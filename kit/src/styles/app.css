@@ -10,6 +10,10 @@
 		--footer-height: 0px;
 	}
 
+	::selection {
+		@apply bg-blue text-white;
+	}
+
 	html {
 		background: #000;
 		color: #fff;
@@ -56,7 +60,7 @@
 
 	.text-gradient {
 		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		/*-webkit-text-fill-color: transparent;*/
 		color: transparent;
 		@apply from-blue to-orange;
 	}
@@ -89,7 +93,7 @@
 
 @layer utilities {
 	.richtext {
-		@apply space-y-2;
+		@apply space-y-2 leading-relaxed;
 
 		& h1 {
 			@apply h1;
@@ -99,19 +103,19 @@
 			@apply h2;
 		}
 
-		& h2 {
+		& h3 {
 			@apply h3;
 		}
 
-		& h2 {
+		& h4 {
 			@apply h4;
 		}
 
-		& h2 {
+		& h5 {
 			@apply h5;
 		}
 
-		& h2 {
+		& h6 {
 			@apply h6;
 		}
 	}
