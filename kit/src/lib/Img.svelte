@@ -22,12 +22,12 @@
 <script lang="ts">
 	import { urlFor } from '$utils/sanity'
 	import type { ImageUrlBuilderOptionsWithAliases } from '@sanity/image-url/lib/types/types'
-	import type { HTMLImgAttributes, SvelteHTMLElements } from 'svelte/elements'
+	import type { HTMLImgAttributes } from 'svelte/elements'
 
 	const {
 		image,
 		imagePortrait,
-		media = '(max-aspect-ratio: 2/3)',
+		media = '(min-aspect-ratio: 1)',
 		class: className,
 		imgClass,
 		options = {},

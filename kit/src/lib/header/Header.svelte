@@ -6,7 +6,9 @@
 		{$page.data.site.title}
 	</a>
 
-	<Social class="flex items-center gap-2 font-serif text-sm drop-shadow-lg" />
+	<Social
+		class="flex items-center [&_a]:px-1 font-serif max-md:text-sm drop-shadow-lg"
+	/>
 </header>
 
 <style lang="postcss">

@@ -7,7 +7,6 @@ export default defineType({
 	title: 'Hero (Homepage)',
 	icon: TfiLayoutCtaLeft,
 	type: 'object',
-	fieldsets: [{ name: 'images', title: 'Images', options: { columns: 2 } }],
 	fields: [
 		defineField({
 			name: 'pretitle',
@@ -33,12 +32,6 @@ export default defineType({
 					type: 'string',
 				}),
 			],
-			fieldset: 'images',
-		}),
-		defineField({
-			name: 'imagePortrait',
-			type: 'image',
-			fieldset: 'images',
 		}),
 	],
 	preview: {

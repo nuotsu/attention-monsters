@@ -1,6 +1,6 @@
 <nav class={className}>
 	{#each $page.data.site.social as social}
-		<a href={social}>
+		<a class="transition-opacity" href={social}>
 			{#if social.includes('spotify')}
 				spotify
 			{:else if social.includes('apple')}
@@ -15,6 +15,12 @@
 		</a>
 	{/each}
 </nav>
+
+<style lang="postcss">
+	nav:hover a:not(:hover) {
+		opacity: 0.4;
+	}
+</style>
 
 <script lang="ts">
 	import { page } from '$app/stores'

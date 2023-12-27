@@ -1,11 +1,8 @@
-<section
-	class="relative grid items-end min-h-[calc(100svh-var(--header-height))]"
->
+<section class="relative grid items-end min-h-fold">
 	<Img
 		class="absolute inset-0 before:top-0 after:bottom-0"
 		imgClass="size-full object-cover"
 		{image}
-		{imagePortrait}
 		preload
 		loading="eager"
 		draggable={false}
@@ -50,11 +47,10 @@
 	import { PortableText } from '@portabletext/svelte'
 	import CTAList from '$lib/CTAList.svelte'
 
-	const { pretitle, content, ctas, image, imagePortrait } = $$props as Partial<{
+	const { pretitle, content, ctas, image } = $$props as Partial<{
 		pretitle: string
 		content: any
 		ctas: Sanity.CTA[]
 		image: Sanity.Image
-		imagePortrait: Sanity.Image
 	}>
 </script>
