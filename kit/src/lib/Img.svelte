@@ -49,7 +49,9 @@
 		preload: boolean
 	} & HTMLImgAttributes
 
-	const src = image && urlFor(image).withOptions(options).url()
+	const src = image && urlFor(image).withOptions(options).auto('format').url()
+
 	const srcset =
-		imagePortrait && urlFor(imagePortrait).withOptions(options).url()
+		imagePortrait &&
+		urlFor(imagePortrait).withOptions(options).auto('format').url()
 </script>

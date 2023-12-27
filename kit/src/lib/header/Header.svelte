@@ -1,5 +1,5 @@
 <header
-	class="sticky z-10 top-0 flex flex-wrap items-center justify-between gap-4 p-4 after:backdrop-blur"
+	class="sticky z-10 top-0 flex flex-wrap items-center gap-x-4 p-4 after:backdrop-blur"
 	bind:offsetHeight
 >
 	<a class="h3 drop-shadow-md" href="/" data-sveltekit-reload>
@@ -7,7 +7,7 @@
 	</a>
 
 	<Social
-		class="flex items-center [&_a]:px-1 font-serif max-md:text-sm drop-shadow-lg"
+		class="ml-auto flex flex-wrap items-center justify-end [&_a]:px-1 font-serif max-md:text-sm drop-shadow-lg"
 	/>
 </header>
 
