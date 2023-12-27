@@ -1,5 +1,5 @@
 <section
-	class="section max-w-screen-lg grid md:grid-cols-[1fr_1.5fr] gap-y-8 gap-x-16 items-end"
+	class="section max-w-screen-lg grid md:grid-cols-[1fr_1.5fr] gap-y-8 gap-x-16 items-end overflow-hidden"
 >
 	<figure class="w-full min-w-0 max-md:max-w-[300px] max-md:mx-auto">
 		<swiper-container effect="cards">
