@@ -21,6 +21,6 @@
 
 	export let data: PageServerData
 
-	const { title, description } = data.page.metadata
-	const { ogimage } = $page.data.site
+	$: ({ title, description } = data.page.metadata)
+	$: ({ ogimage } = $page.data.site)
 </script>

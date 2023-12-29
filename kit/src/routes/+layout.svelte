@@ -1,6 +1,6 @@
 <Header />
 
-<main class="grow relative z-[1] bg-black after:block">
+<main class="relative z-[1] bg-black after:block">
 	<slot />
 </main>
 

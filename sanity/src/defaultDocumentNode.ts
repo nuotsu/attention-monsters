@@ -17,7 +17,7 @@ const defaultDocumentNode: DefaultDocumentNodeResolver = (
 					.options({
 						url: (doc: SanityPage) => {
 							const slug = doc?.metadata?.slug?.current
-							const path = slug === 'index' ? '' : `/${slug}`
+							const path = slug === 'index' ? '' : slug
 							return dev
 								? `http://localhost:5173/${path}`
 								: `https://attention-monsters-git-staging-nuotsu.vercel.app/${path}`

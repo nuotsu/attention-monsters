@@ -81,7 +81,7 @@
 	}
 
 	.link {
-		text-decoration: underline;
+		text-decoration: 1px underline wavy;
 	}
 
 	/* layout */
@@ -117,6 +117,10 @@
 
 		& h6 {
 			@apply h6;
+		}
+
+		&>p>a {
+			@apply link;
 		}
 	}
 
