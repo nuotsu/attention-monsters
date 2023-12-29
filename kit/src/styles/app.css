@@ -119,7 +119,7 @@
 			@apply h6;
 		}
 
-		&>p>a {
+		&>p>a:not(.action) {
 			@apply link;
 		}
 	}
