@@ -1,8 +1,6 @@
-import { Iframe } from 'sanity-plugin-iframe-pane'
+import { isDev, type SanityDocument } from 'sanity'
 import type { DefaultDocumentNodeResolver } from 'sanity/desk'
-import type { SanityDocument } from 'sanity'
-
-const dev = process.env.NODE_ENV === 'development'
+import { Iframe } from 'sanity-plugin-iframe-pane'
 
 const defaultDocumentNode: DefaultDocumentNodeResolver = (
 	S,
@@ -18,7 +16,7 @@ const defaultDocumentNode: DefaultDocumentNodeResolver = (
 						url: (doc: SanityPage) => {
 							const slug = doc?.metadata?.slug?.current
 							const path = slug === 'index' ? '' : slug
-							return dev
+							return isDev
 								? `http://localhost:5173/${path}`
 								: `https://attention-monsters-git-staging-nuotsu.vercel.app/${path}`
 						},

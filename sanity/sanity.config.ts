@@ -1,4 +1,5 @@
 import { defineConfig } from 'sanity'
+import studio from './src/studio'
 import { deskTool } from 'sanity/desk'
 import {
 	dashboardTool,
@@ -20,6 +21,8 @@ export default defineConfig({
 
 	projectId: '6qmz2lrb',
 	dataset: 'production',
+
+	...studio,
 
 	plugins: [
 		deskTool({ defaultDocumentNode, structure }),
