@@ -1,12 +1,24 @@
+<svelte:head>
+	{#if image}
+		<link rel="preload" as="image" href={src} />
+	{/if}
+</svelte:head>
+
 <section class="relative grid items-end min-h-fold">
-	<Img
-		class="absolute inset-0 before:top-0 after:bottom-0"
-		imgClass="size-full object-cover"
-		{image}
-		preload
-		loading="eager"
-		draggable={false}
-	/>
+	{#if image}
+		{@const { width, height } = getImageDimensions(image)}
+
+		<picture class="absolute inset-0 before:top-0 after:bottom-0">
+			<img
+				class="size-full object-cover"
+				{src}
+				alt=""
+				{width}
+				{height}
+				loading="eager"
+			/>
+		</picture>
+	{/if}
 
 	<div class="relative section w-full max-md:before:backdrop-blur">
 		<div class="max-w-md richtext drop-shadow-xl [&_h1]:text-pretty">
@@ -21,16 +33,16 @@
 
 <style lang="postcss">
 	section {
-		& :global(picture::before),
-		:global(picture::after) {
+		& picture::before,
+		& picture::after {
 			@apply absolute inset-x-0 h-1/4 from-black to-transparent pointer-events-none;
 		}
 
-		& :global(picture::before) {
+		& picture::before {
 			@apply bg-gradient-to-b;
 		}
 
-		& :global(picture::after) {
+		& picture::after {
 			@apply bg-gradient-to-t;
 		}
 	}
@@ -43,7 +55,8 @@
 </style>
 
 <script lang="ts">
-	import Img from '$lib/Img.svelte'
+	import { urlFor } from '$utils/sanity'
+	import { getImageDimensions } from '@sanity/asset-utils'
 	import { PortableText } from '@portabletext/svelte'
 	import CTAList from '$lib/CTAList.svelte'
 
@@ -53,4 +66,6 @@
 		ctas: Sanity.CTA[]
 		image: Sanity.Image
 	}>
+
+	const src = image && urlFor(image).auto('format').url()
 </script>

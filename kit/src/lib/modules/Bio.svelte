@@ -5,7 +5,13 @@
 		<swiper-container effect="cards">
 			{#each images as image}
 				<swiper-slide>
-					<Img class="max-w-[400px]" {image} options={{ width: 600 }} />
+					<img
+						src={image && urlFor(image).size(600, 600).auto('format').url()}
+						alt=""
+						width={600}
+						height={600}
+						loading="lazy"
+					/>
 				</swiper-slide>
 			{/each}
 		</swiper-container>
@@ -25,7 +31,7 @@
 </style>
 
 <script lang="ts">
-	import Img from '$lib/Img.svelte'
+	import { urlFor } from '$utils/sanity'
 	import { PortableText } from '@portabletext/svelte'
 	import { register } from 'swiper/element/bundle'
 
