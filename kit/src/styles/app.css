@@ -87,7 +87,10 @@
 
 	.input {
 		outline: none;
-		@apply _btn border-white/30 bg-transparent text-current focus:border-orange focus:ring ring-orange/30;
+		border-radius: 0;
+		background: transparent;
+		color: currentColor;
+		@apply _btn border-white/30 focus:border-orange focus:ring ring-orange/30;
 
 		&::placeholder {
 			@apply text-blue/40;
