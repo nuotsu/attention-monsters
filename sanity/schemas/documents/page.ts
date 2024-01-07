@@ -17,6 +17,7 @@ export default defineType({
 				{ type: 'embedded-player' },
 				{ type: 'form.contact' },
 				{ type: 'hero.home' },
+				{ type: 'hero.image' },
 			],
 		}),
 		defineField({

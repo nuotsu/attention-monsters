@@ -13,6 +13,7 @@ import bio from './modules/bio'
 import embeddedPlayer, { embeddedPlayerItem } from './modules/embedded-player'
 import formContact from './modules/form.contact'
 import heroHome from './modules/hero.home'
+import heroImage from './modules/hero.image'
 
 export const schemaTypes = [
 	// documents
@@ -31,4 +32,5 @@ export const schemaTypes = [
 	embeddedPlayerItem,
 	formContact,
 	heroHome,
+	heroImage,
 ]

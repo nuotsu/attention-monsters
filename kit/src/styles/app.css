@@ -87,7 +87,7 @@
 
 	.input {
 		outline: none;
-		@apply _btn border-current bg-transparent text-current focus:border-orange focus:ring ring-orange/30;
+		@apply _btn border-white/30 bg-transparent text-current focus:border-orange focus:ring ring-orange/30;
 
 		&::placeholder {
 			@apply text-blue/40;
@@ -97,7 +97,7 @@
 	/* layout */
 
 	.section {
-		@apply max-w-screen-xl mx-auto p-8 py-12 max-md:px-4;
+		@apply max-w-screen-xl mx-auto p-8 md:py-16 max-md:px-4;
 	}
 }
 

@@ -7,6 +7,8 @@
 		<FormContact {...module} />
 	{:else if module._type === 'hero.home'}
 		<HeroHome {...module} />
+	{:else if module._type === 'hero.image'}
+		<HeroImage {...module} />
 	{:else}
 		<div data-type={module._type} />
 	{/if}
@@ -17,6 +19,7 @@
 	import EmbeddedPlayer from './EmbeddedPlayer.svelte'
 	import FormContact from './FormContact.svelte'
 	import HeroHome from './HeroHome.svelte'
+	import HeroImage from './HeroImage.svelte'
 
 	export let modules: Sanity.Module[] = []
 </script>
