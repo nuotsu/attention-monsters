@@ -1,6 +1,11 @@
 <footer class="sticky bottom-0 section w-full py-8" bind:offsetHeight>
-	<p class="h2 text-gradient bg-gradient-to-br text-center opacity-20">
-		<a href={instagram}>#attentionmonsters</a>
+	<p class="h2 text-center">
+		<a
+			class="text-gradient bg-gradient-to-br transition duration-1000 [&:not(:hover)]:opacity-20"
+			href={instagram}
+		>
+			#attentionmonsters
+		</a>
 	</p>
 
 	<div

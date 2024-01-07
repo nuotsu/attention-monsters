@@ -16,6 +16,7 @@
 				{width}
 				{height}
 				loading="eager"
+				draggable="false"
 			/>
 		</picture>
 	{/if}

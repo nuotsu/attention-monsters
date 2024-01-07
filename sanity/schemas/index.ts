@@ -11,6 +11,7 @@ import metadata from './objects/metadata'
 // modules
 import bio from './modules/bio'
 import embeddedPlayer, { embeddedPlayerItem } from './modules/embedded-player'
+import formContact from './modules/form.contact'
 import heroHome from './modules/hero.home'
 
 export const schemaTypes = [
@@ -28,5 +29,6 @@ export const schemaTypes = [
 	bio,
 	embeddedPlayer,
 	embeddedPlayerItem,
+	formContact,
 	heroHome,
 ]

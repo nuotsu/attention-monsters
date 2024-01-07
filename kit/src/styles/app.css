@@ -15,8 +15,7 @@
 	}
 
 	html {
-		background: #000;
-		color: #fff;
+		@apply bg-black text-white accent-orange caret-blue;
 	}
 }
 
@@ -69,7 +68,7 @@
 
 	._btn {
 		padding: .25em .75em;
-		@apply border-[.5px] border-transparent;
+		border: .5px solid transparent;
 	}
 
 	.action {
@@ -82,6 +81,17 @@
 
 	.link {
 		text-decoration: 1px underline wavy;
+	}
+
+	/* inputs */
+
+	.input {
+		outline: none;
+		@apply _btn border-current bg-transparent text-current focus:border-orange focus:ring ring-orange/30;
+
+		&::placeholder {
+			@apply text-blue/40;
+		}
 	}
 
 	/* layout */

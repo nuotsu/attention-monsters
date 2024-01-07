@@ -3,6 +3,8 @@
 		<Bio {...module} />
 	{:else if module._type === 'embedded-player'}
 		<EmbeddedPlayer {...module} />
+	{:else if module._type === 'form.contact'}
+		<FormContact {...module} />
 	{:else if module._type === 'hero.home'}
 		<HeroHome {...module} />
 	{:else}
@@ -13,6 +15,7 @@
 <script lang="ts">
 	import Bio from './Bio.svelte'
 	import EmbeddedPlayer from './EmbeddedPlayer.svelte'
+	import FormContact from './FormContact.svelte'
 	import HeroHome from './HeroHome.svelte'
 
 	export let modules: Sanity.Module[] = []
