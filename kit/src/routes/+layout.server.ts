@@ -3,7 +3,15 @@ import groq from 'groq'
 import type { LayoutServerLoad } from './$types'
 
 export const load: LayoutServerLoad = async () => {
-	const site = await client.fetch<Sanity.Site>(groq`*[_type == 'site'][0]`)
+	const site = await client.fetch<Sanity.Site>(groq`
+		*[_type == 'site'][0]{
+			...,
+			menu[]{
+				...,
+				internal->{ title, metadata }
+			}
+		}
+	`)
 
 	return {
 		site,

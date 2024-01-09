@@ -7,7 +7,9 @@ declare global {
 	namespace App {
 		// interface Error {}
 		// interface Locals {}
-		// interface PageData {}
+		interface PageData {
+			site: Sanity.Site
+		}
 		// interface PageState {}
 		// interface Platform {}
 	}
@@ -18,7 +20,7 @@ declare global {
 		type Site = SanityDocument & {
 			title: string
 			logo: Image
-			menu: (Link | LinkList)[]
+			menu: Link[]
 			social: string[]
 			ogimage: Image
 		}

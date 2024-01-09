@@ -1,4 +1,4 @@
-<nav class={className}>
+<nav class={className} style:grid-area={gridArea}>
 	{#each $page.data.site.social as social}
 		<a class="transition-opacity" href={social}>
 			{#if social.includes('spotify')}
@@ -25,7 +25,8 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 
-	const { class: className } = $$props as {
+	const { class: className, gridArea } = $$props as {
 		class: string
+		gridArea?: string
 	}
 </script>

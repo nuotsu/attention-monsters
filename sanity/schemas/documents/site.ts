@@ -16,7 +16,7 @@ export default defineType({
 		defineField({
 			name: 'menu',
 			type: 'array',
-			of: [{ type: 'link' }, { type: 'link.list' }],
+			of: [{ type: 'link' } /*{ type: 'link.list' }*/],
 		}),
 		defineField({
 			name: 'social',

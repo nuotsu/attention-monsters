@@ -104,6 +104,17 @@
 }
 
 @layer utilities {
+	.carousel {
+		display: flex;
+		scroll-snap-type: x mandatory;
+		overflow-x: auto;
+
+		&>* {
+			scroll-snap-align: center;
+			flex: 0 0 var(--size, min(80vw, 300px));
+		}
+	}
+
 	.richtext {
 		@apply space-y-2 leading-relaxed;
 
@@ -136,14 +147,36 @@
 		}
 	}
 
-	.carousel {
-		display: flex;
-		scroll-snap-type: x mandatory;
-		overflow-x: auto;
+	/* animations */
 
-		&>* {
-			scroll-snap-align: center;
-			flex: 0 0 var(--size, min(80vw, 300px));
+	@keyframes anim-fade {
+		from {
+			opacity: 0;
+			translate: var(--x, 0) var(--y, 0);
 		}
+	}
+
+	.anim-fade,
+	.anim-fade-to-l,
+	.anim-fade-to-r,
+	.anim-fade-to-t,
+	.anim-fade-to-b {
+		animation: anim-fade var(--duration, 0.2s) ease-in-out forwards;
+	}
+
+	.anim-fade-to-l {
+		--x: 1rem;
+	}
+
+	.anim-fade-to-r {
+		--x: -1rem;
+	}
+
+	.anim-fade-to-t {
+		--y: 1rem;
+	}
+
+	.anim-fade-to-b {
+		--y: -1rem;
 	}
 }
