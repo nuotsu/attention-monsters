@@ -11,7 +11,8 @@ export default {
 				serif: `'Instrument Serif', serif`,
 			},
 			minHeight: {
-				xsvh: 'calc(100svh - var(--footer-height))',
+				fold: 'calc(100svh - var(--header-height))',
+				xsvh: 'calc(100svh - var(--header-height) - var(--footer-height))',
 			},
 		},
 	},

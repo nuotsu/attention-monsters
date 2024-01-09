@@ -35,10 +35,10 @@
 	import { PortableText } from '@portabletext/svelte'
 	import { register } from 'swiper/element/bundle'
 
+	register()
+
 	const { content, images = [] } = $$props as Partial<{
 		content: any
 		images: Sanity.Image[]
 	}>
-
-	register()
 </script>

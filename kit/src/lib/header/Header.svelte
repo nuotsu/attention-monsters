@@ -1,7 +1,7 @@
-<input id="menu-open" type="checkbox" hidden />
+<input id="menu-open" type="checkbox" hidden bind:checked />
 
 <header
-	class="fixed z-10 top-0 w-full grid gap-4 items-center p-4 after:backdrop-blur"
+	class="fixed z-10 top-0 w-full grid gap-x-4 gap-y-6 items-center p-4 after:backdrop-blur"
 >
 	<div style:grid-area="logo">
 		<a
@@ -13,23 +13,7 @@
 		</a>
 	</div>
 
-	<nav class="h4 max-sm:mx-auto max-sm:anim-fade-to-b" style:grid-area="menu">
-		<ul>
-			{#each menu as page}
-				<li>
-					{#if page.type === 'internal'}
-						<a href={page.internal?.metadata.slug.current}>
-							{page.label || page.internal?.title}
-						</a>
-					{:else}
-						<a href={page.external}>
-							{page.label}
-						</a>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-	</nav>
+	<Menu />
 
 	<Social
 		class="social flex flex-wrap items-center justify-center sm:justify-end [&_a]:px-1 font-serif max-md:text-sm drop-shadow-lg max-sm:anim-fade-to-b"
@@ -86,7 +70,15 @@
 
 <script lang="ts">
 	import { page } from '$app/stores'
+	import { afterNavigate } from '$app/navigation'
+	import Menu from './Menu.svelte'
 	import Social from '$lib/Social.svelte'
 
-	$: ({ title, menu } = $page.data.site)
+	$: ({ title } = $page.data.site)
+
+	let checked = false
+
+	afterNavigate(() => {
+		checked = false
+	})
 </script>

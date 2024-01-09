@@ -16,6 +16,15 @@
 	html {
 		@apply bg-black text-white accent-orange caret-blue;
 	}
+
+	summary {
+		cursor: pointer;
+		display: block;
+	}
+
+	::-webkit-details-marker {
+		display: none;
+	}
 }
 
 @layer components {
@@ -144,6 +153,11 @@
 
 		&>p>a:not(.action) {
 			@apply link;
+		}
+
+		& :is(ul, ol) {
+			list-style: revert;
+			padding-left: 1.5em;
 		}
 	}
 

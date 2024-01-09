@@ -9,6 +9,7 @@ declare global {
 		// interface Locals {}
 		interface PageData {
 			site: Sanity.Site
+			discography: Sanity.Discography[]
 		}
 		// interface PageState {}
 		// interface Platform {}
@@ -48,7 +49,7 @@ declare global {
 
 		type Song = SanityDocument & {
 			title: string
-			lyrics: string
+			lyrics: any
 		}
 
 		// objects

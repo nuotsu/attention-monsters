@@ -1,6 +1,8 @@
 {#each modules || [] as module (module._type)}
 	{#if module._type === 'bio'}
 		<Bio {...module} />
+	{:else if module._type === 'discography-list'}
+		<DiscographyList {...module} />
 	{:else if module._type === 'embedded-player'}
 		<EmbeddedPlayer {...module} />
 	{:else if module._type === 'form.contact'}
@@ -16,6 +18,7 @@
 
 <script lang="ts">
 	import Bio from './Bio.svelte'
+	import DiscographyList from './DiscographyList.svelte'
 	import EmbeddedPlayer from './EmbeddedPlayer.svelte'
 	import FormContact from './FormContact.svelte'
 	import HeroHome from './HeroHome.svelte'

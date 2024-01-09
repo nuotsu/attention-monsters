@@ -17,7 +17,7 @@
 </nav>
 
 <style lang="postcss">
-	nav:hover a:not(:hover) {
+	nav:has(a:hover) a:not(:hover) {
 		opacity: 0.4;
 	}
 </style>

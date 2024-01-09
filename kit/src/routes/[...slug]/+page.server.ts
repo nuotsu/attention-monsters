@@ -4,14 +4,18 @@ import { error } from '@sveltejs/kit'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ params: { slug } }) => {
-	const page = await client.fetch<Sanity.Page>(
-		groq`*[_type == 'page' && metadata.slug.current == $slug][0]`,
+	const data = await client.fetch(
+		groq`{
+		'page': *[_type == 'page' && metadata.slug.current == $slug][0],
+		'discography': *[_type == 'discography']|order(releaseDate desc){
+			...,
+			songs[]->
+		}
+	}`,
 		{ slug: slug === '' ? 'index' : slug },
 	)
 
-	if (!page) error(404, 'Page not found')
+	if (!data) error(404, 'Page not found')
 
-	return {
-		page,
-	}
+	return data
 }
