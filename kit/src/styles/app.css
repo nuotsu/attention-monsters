@@ -84,7 +84,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		@apply _btn border-current bg-black/20 backdrop-blur-sm font-serif;
+		@apply _btn border-current bg-black/20 backdrop-blur font-serif hover:bg-gradient-to-br from-blue/40 to-orange/40;
 	}
 
 	.link {
@@ -98,7 +98,7 @@
 		border-radius: 0;
 		background: transparent;
 		color: currentColor;
-		@apply _btn border-white/30 focus:border-orange focus:ring ring-orange/30;
+		@apply _btn transition-colors border-white/30 hover:border-blue focus:border-orange focus:ring ring-orange/30;
 
 		&::placeholder {
 			@apply text-blue/40;
