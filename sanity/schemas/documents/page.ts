@@ -14,6 +14,7 @@ export default defineType({
 			type: 'array',
 			of: [
 				{ type: 'bio' },
+				{ type: 'discography-list' },
 				{ type: 'embedded-player' },
 				{ type: 'form.contact' },
 				{ type: 'hero.home' },
