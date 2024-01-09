@@ -29,6 +29,26 @@ declare global {
 			metadata: Metadata
 		}
 
+		type Article = SanityDocument & {
+			title: string
+			content: any
+			publishDate: string
+			metadata: Metadata
+		}
+
+		type Discography = SanityDocument & {
+			title: string
+			type: 'Single' | 'Album'
+			releaseDate: string
+			images: Image[]
+			songs: Song[]
+		}
+
+		type Song = SanityDocument & {
+			title: string
+			lyrics: string
+		}
+
 		// objects
 
 		type CTA = {

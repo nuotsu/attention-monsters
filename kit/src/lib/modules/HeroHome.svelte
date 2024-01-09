@@ -4,7 +4,7 @@
 	{/if}
 </svelte:head>
 
-<section class="relative grid items-end min-h-fold">
+<section class="relative grid items-end min-h-svh">
 	{#if image}
 		{@const { width, height } = getImageDimensions(image)}
 

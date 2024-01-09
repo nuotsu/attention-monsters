@@ -1,6 +1,5 @@
 <header
-	class="sticky z-10 top-0 flex flex-wrap items-center gap-x-4 p-4 after:backdrop-blur"
-	bind:offsetHeight
+	class="fixed z-10 top-0 w-full flex flex-wrap items-center gap-x-4 p-4 after:backdrop-blur"
 >
 	<a class="h3 drop-shadow-md" href="/" data-sveltekit-reload>
 		{$page.data.site.title}
@@ -26,13 +25,4 @@
 	import Social from '$lib/Social.svelte'
 
 	let offsetHeight: number
-
-	$: {
-		if (offsetHeight) {
-			document.documentElement.style.setProperty(
-				'--header-height',
-				`${offsetHeight}px`,
-			)
-		}
-	}
 </script>
