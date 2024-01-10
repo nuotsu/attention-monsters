@@ -1,8 +1,10 @@
 <Header />
 
-<main class="relative z-[1] bg-black after:block" class:mt-8={slug !== ''}>
-	<slot />
-</main>
+{#key slug}
+	<main class="relative z-[1] bg-black after:block" class:mt-8={slug !== ''}>
+		<slot />
+	</main>
+{/key}
 
 <Footer />
 

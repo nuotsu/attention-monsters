@@ -3,12 +3,8 @@
 <header
 	class="fixed z-10 top-0 w-full grid gap-x-4 gap-y-6 items-center p-4 after:backdrop-blur"
 >
-	<div style:grid-area="logo">
-		<a
-			href="/"
-			data-sveltekit-reload
-			class="h3 max-sm:h4 text-nowrap drop-shadow-md"
-		>
+	<div style:grid-area="logo drop-shadow-md">
+		<a href="/" class="h3 max-sm:h4 text-nowrap">
 			{title}
 		</a>
 	</div>
@@ -16,7 +12,10 @@
 	<Menu />
 
 	<Social
-		class="social flex flex-wrap items-center justify-center sm:justify-end [&_a]:px-1 font-serif max-md:text-sm drop-shadow-lg max-sm:anim-fade-to-b"
+		class="
+			social flex flex-wrap items-center justify-center sm:justify-end [&_a]:px-1 font-serif drop-shadow-md
+			max-sm:anim-fade-to-b max-md:text-sm
+		"
 		gridArea="social"
 	/>
 

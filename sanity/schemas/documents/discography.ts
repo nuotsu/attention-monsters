@@ -6,6 +6,10 @@ export default defineType({
 	title: 'Discography',
 	icon: VscMusic,
 	type: 'document',
+	fieldsets: [
+		{ title: 'Contents', name: 'contents', options: { columns: 2 } },
+		{ title: 'Info', name: 'info', options: { columns: 2 } },
+	],
 	fields: [
 		defineField({
 			name: 'title',
@@ -17,20 +21,29 @@ export default defineType({
 			options: {
 				list: ['Single', 'Album'],
 			},
-		}),
-		defineField({
-			name: 'releaseDate',
-			type: 'date',
-		}),
-		defineField({
-			name: 'images',
-			type: 'array',
-			of: [{ type: 'image' }],
+			fieldset: 'contents',
 		}),
 		defineField({
 			name: 'songs',
 			type: 'array',
 			of: [{ type: 'reference', to: [{ type: 'song' }] }],
+			fieldset: 'contents',
+		}),
+		defineField({
+			name: 'releaseDate',
+			type: 'date',
+			fieldset: 'info',
+		}),
+		defineField({
+			name: 'links',
+			type: 'array',
+			of: [{ type: 'url' }],
+			fieldset: 'info',
+		}),
+		defineField({
+			name: 'images',
+			type: 'array',
+			of: [{ type: 'image' }],
 		}),
 	],
 	preview: {

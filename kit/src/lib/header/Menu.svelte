@@ -1,13 +1,19 @@
-<nav class="h4 max-sm:mx-auto max-sm:anim-fade-to-b" style:grid-area="menu">
-	<ul class="flex max-sm:flex-col gap-x-3 gap-y-2">
+<nav
+	class="h4 max-sm:mx-auto drop-shadow-md max-sm:anim-fade-to-b"
+	style:grid-area="menu"
+>
+	<ul class="flex flex-wrap max-sm:flex-col items-center max-sm:gap-y-2">
 		{#each menu as page}
 			<li>
 				{#if page.type === 'internal'}
-					<a href={page.internal?.metadata.slug.current}>
+					<a
+						class="px-2 transition-opacity"
+						href={page.internal?.metadata.slug.current}
+					>
 						{page.label || page.internal?.title}
 					</a>
 				{:else}
-					<a href={page.external}>
+					<a class="px-2 transition-opacity" href={page.external}>
 						{page.label}
 					</a>
 				{/if}

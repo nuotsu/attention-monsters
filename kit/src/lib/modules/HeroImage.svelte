@@ -16,6 +16,7 @@
 <style lang="postcss">
 	.applyGradient {
 		position: relative;
+		display: block;
 
 		&::after {
 			content: '';
