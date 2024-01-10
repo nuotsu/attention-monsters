@@ -1,5 +1,6 @@
 <section
-	class="section max-w-screen-lg grid md:grid-cols-[1fr_1.5fr] gap-y-8 gap-x-16 items-end max-md:overflow-hidden"
+	id="bio"
+	class="section max-w-screen-lg grid md:grid-cols-[1fr_1.5fr] gap-y-8 gap-x-20 items-end max-md:overflow-hidden"
 >
 	<figure class="w-full min-w-0 max-md:max-w-[300px] max-md:mx-auto">
 		<swiper-container effect="cards">
@@ -18,7 +19,7 @@
 	</figure>
 
 	<div
-		class="max-w-lg mx-auto richtext [&_em]:text-gradient [&_em]:bg-gradient-to-r"
+		class="relative max-w-lg mx-auto richtext [&_em]:text-gradient [&_em]:bg-gradient-to-r"
 	>
 		<PortableText value={content} components={{}} />
 	</div>

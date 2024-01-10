@@ -1,4 +1,4 @@
-<section class="section max-w-screen-lg">
+<section id="contact-form" class="section max-w-screen-lg">
 	<div class="max-md:max-w-lg mx-auto grid md:grid-cols-2 gap-8">
 		<div class="richtext md:text-right">
 			<PortableText value={content} components={{}} />

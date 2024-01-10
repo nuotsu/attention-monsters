@@ -16,7 +16,7 @@
 		<p class="font-serif">
 			<small>
 				&copy; {new Date().getFullYear()}
-				— {$page.data.site.title} — 💀🥀
+				— <a href="/" data-sveltekit-reload>{$page.data.site.title}</a> — 💀🥀
 			</small>
 		</p>
 	</div>

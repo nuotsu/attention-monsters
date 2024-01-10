@@ -42,9 +42,10 @@ declare global {
 		type Discography = SanityDocument & {
 			title: string
 			type: 'Single' | 'Album'
-			releaseDate: string
-			images: Image[]
 			songs: Song[]
+			releaseDate: string
+			links: string[]
+			images: Image[]
 		}
 
 		type Song = SanityDocument & {
