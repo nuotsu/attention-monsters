@@ -97,7 +97,12 @@
 	}
 
 	.link {
-		text-decoration: 1px underline wavy;
+		text-decoration: .5px underline;
+		text-underline-offset: .3ch;
+
+		&:hover {
+			text-decoration-color: currentColor;
+		}
 	}
 
 	/* inputs */

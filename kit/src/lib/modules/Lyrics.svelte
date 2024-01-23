@@ -1,5 +1,5 @@
 <details class="contents" name="song" bind:open>
-	<summary class="inline-block link text-blue text-xs ml-2">
+	<summary class="inline-block link decoration-blue/50 text-blue text-xs ml-2">
 		{#if open}
 			Hide lyrics
 		{:else}
