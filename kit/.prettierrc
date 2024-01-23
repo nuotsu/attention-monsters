@@ -3,7 +3,8 @@
 	"singleQuote": true,
 	"semi": false,
 	"trailingComma": "all",
-	"plugins": ["prettier-plugin-svelte"],
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwind"],
 	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
-	"svelteSortOrder": "markup-styles-scripts-options"
+	"svelteSortOrder": "markup-styles-scripts-options",
+	"parser": "svelte"
 }

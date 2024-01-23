@@ -41,9 +41,8 @@ export default defineType({
 			fieldset: 'info',
 		}),
 		defineField({
-			name: 'images',
-			type: 'array',
-			of: [{ type: 'image' }],
+			name: 'image',
+			type: 'image',
 		}),
 	],
 	preview: {
@@ -51,12 +50,24 @@ export default defineType({
 			title: 'title',
 			type: 'type',
 			releaseDate: 'releaseDate',
-			images: 'images',
+			media: 'image',
 		},
-		prepare: ({ title, type, releaseDate, images }) => ({
+		prepare: ({ title, type, releaseDate, media }) => ({
 			title: title,
 			subtitle: [releaseDate, type].filter(Boolean).join(' — '),
-			media: images[0],
+			media,
 		}),
 	},
+	orderings: [
+		{
+			title: 'Release Date',
+			name: 'releaseDate',
+			by: [{ field: 'releaseDate', direction: 'desc' }],
+		},
+		{
+			title: 'Title',
+			name: 'title',
+			by: [{ field: 'title', direction: 'desc' }],
+		},
+	],
 })

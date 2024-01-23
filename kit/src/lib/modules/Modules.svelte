@@ -11,6 +11,8 @@
 		<HeroHome {...module} />
 	{:else if module._type === 'hero.image'}
 		<HeroImage {...module} />
+	{:else if module._type === 'news-list'}
+		<NewsList {...module} />
 	{:else}
 		<div data-type={module._type} />
 	{/if}
@@ -23,6 +25,7 @@
 	import FormContact from './FormContact.svelte'
 	import HeroHome from './HeroHome.svelte'
 	import HeroImage from './HeroImage.svelte'
+	import NewsList from './NewsList.svelte'
 
 	export let modules: Sanity.Module[] = []
 </script>

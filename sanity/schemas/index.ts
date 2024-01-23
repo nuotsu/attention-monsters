@@ -1,5 +1,6 @@
 // documents
 import site from './documents/site'
+import news from './documents/news'
 import page from './documents/page'
 import article from './documents/article'
 import discography from './documents/discography'
@@ -18,10 +19,12 @@ import embeddedPlayer, { embeddedPlayerItem } from './modules/embedded-player'
 import formContact from './modules/form.contact'
 import heroHome from './modules/hero.home'
 import heroImage from './modules/hero.image'
+import newsList from './modules/news-list'
 
 export const schemaTypes = [
 	// documents
 	site,
+	news,
 	page,
 	article,
 	discography,
@@ -41,4 +44,5 @@ export const schemaTypes = [
 	formContact,
 	heroHome,
 	heroImage,
+	newsList,
 ]

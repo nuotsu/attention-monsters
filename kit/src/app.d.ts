@@ -7,10 +7,13 @@ declare global {
 	namespace App {
 		// interface Error {}
 		// interface Locals {}
+
 		interface PageData {
 			site: Sanity.Site
+			news: Sanity.News[]
 			discography: Sanity.Discography[]
 		}
+
 		// interface PageState {}
 		// interface Platform {}
 	}
@@ -24,6 +27,11 @@ declare global {
 			menu: Link[]
 			social: string[]
 			ogimage: Image
+		}
+
+		type News = SanityDocument & {
+			content: any
+			date: string
 		}
 
 		type Page = SanityDocument & {
@@ -45,7 +53,7 @@ declare global {
 			songs: Song[]
 			releaseDate: string
 			links: string[]
-			images: Image[]
+			image: Image
 		}
 
 		type Song = SanityDocument & {

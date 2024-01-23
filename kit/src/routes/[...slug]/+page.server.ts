@@ -7,6 +7,7 @@ export const load: PageServerLoad = async ({ params: { slug } }) => {
 	const data = await client.fetch(
 		groq`{
 		'page': *[_type == 'page' && metadata.slug.current == $slug][0],
+		'news': *[_type == 'news'] | order(date desc),
 		'discography': *[_type == 'discography']|order(releaseDate desc){
 			...,
 			songs[]->
