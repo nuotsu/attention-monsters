@@ -5,10 +5,10 @@
 
 	{#each discography as disc}
 		<article
-			class="w-full max-w-screen-sm mx-auto grid md:grid-cols-[150px,1fr] gap-8 items-start"
+			class="w-full max-w-screen-sm mx-auto grid grid-cols-[auto,1fr] gap-4 sm:gap-8 items-start"
 		>
 			<div class="grid gap-3">
-				<figure>
+				<figure class="max-w-[80px] sm:max-w-[150px] mx-auto">
 					{#if disc.image}
 						<img
 							src={urlFor(disc.image).size(300, 300).auto('format').url()}
@@ -82,17 +82,13 @@
 </style>
 
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { PortableText } from '@portabletext/svelte'
 	import { page } from '$app/stores'
 	import { urlFor } from '$utils/sanity'
-	import { register } from 'swiper/element/bundle'
 	import IconSpotify from '$lib/icons/IconSpotify.svelte'
 	import IconAppleMusic from '$lib/icons/IconAppleMusic.svelte'
 	import Lyrics from './Lyrics.svelte'
 	import Date from '$lib/Date.svelte'
-
-	onMount(register)
 
 	const { content } = $$props as Partial<{
 		content: any
