@@ -19,6 +19,7 @@ export default defineType({
 				{ type: 'form.contact' },
 				{ type: 'hero.home' },
 				{ type: 'hero.image' },
+				{ type: 'news-list' },
 			],
 		}),
 		defineField({

@@ -1,6 +1,6 @@
 import { defineConfig } from 'sanity'
 import studio from './src/studio'
-import { deskTool } from 'sanity/desk'
+import { structureTool } from 'sanity/structure'
 import {
 	dashboardTool,
 	projectInfoWidget,
@@ -25,7 +25,7 @@ export default defineConfig({
 	...studio,
 
 	plugins: [
-		deskTool({ defaultDocumentNode, structure }),
+		structureTool({ defaultDocumentNode, structure }),
 		dashboardTool({
 			widgets: [projectInfoWidget(), projectUsersWidget(), vercelWidget()],
 		}),

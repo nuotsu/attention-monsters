@@ -38,6 +38,7 @@
 		"@sanity/image-url": "^1.0.2",
 		"@sanity/types": "^3.23.4",
 		"groq": "^3.23.4",
+		"prettier-plugin-tailwindcss": "^0.5.11",
 		"swiper": "^11.0.5",
 		"tailwind-merge": "^2.2.0"
 	}
