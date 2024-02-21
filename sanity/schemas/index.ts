@@ -7,6 +7,7 @@ import discography from './documents/discography'
 import song from './documents/song'
 
 // objects
+import countdown from './objects/countdown'
 import cta from './objects/cta'
 import link from './objects/link'
 import linkList from './objects/link.list'
@@ -31,6 +32,7 @@ export const schemaTypes = [
 	song,
 
 	// objects
+	countdown,
 	cta,
 	link,
 	linkList,

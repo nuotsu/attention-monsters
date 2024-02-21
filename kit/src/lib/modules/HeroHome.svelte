@@ -26,7 +26,14 @@
 			{#if pretitle}
 				<p class="technical text-xs">{pretitle}</p>
 			{/if}
-			<PortableText value={content} components={{}} />
+			<PortableText
+				value={content}
+				components={{
+					marks: {
+						countdown: Countdown,
+					},
+				}}
+			/>
 			<CTAList {ctas} class="!mt-4" />
 		</div>
 	</div>
@@ -59,6 +66,7 @@
 	import { urlFor } from '$utils/sanity'
 	import { getImageDimensions } from '@sanity/asset-utils'
 	import { PortableText } from '@portabletext/svelte'
+	import Countdown from '$lib/Countdown.svelte'
 	import CTAList from '$lib/CTAList.svelte'
 
 	const { pretitle, content, ctas, image } = $$props as Partial<{
