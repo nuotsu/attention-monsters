@@ -15,7 +15,14 @@ export default defineType({
 		defineField({
 			name: 'content',
 			type: 'array',
-			of: [{ type: 'block' }],
+			of: [
+				{
+					type: 'block',
+					marks: {
+						annotations: [{ name: 'countdown', type: 'countdown' }],
+					},
+				},
+			],
 		}),
 		defineField({
 			name: 'ctas',
@@ -41,7 +48,7 @@ export default defineType({
 		},
 		prepare: ({ content, media }) => ({
 			title: getBlockText(content),
-			subtitle: 'Hero (centered)',
+			subtitle: 'Hero (home)',
 			media,
 		}),
 	},
