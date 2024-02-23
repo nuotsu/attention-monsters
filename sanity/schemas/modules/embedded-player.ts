@@ -31,6 +31,11 @@ export const embeddedPlayerItem = defineType({
 	type: 'object',
 	fields: [
 		defineField({
+			name: 'enabled',
+			type: 'boolean',
+			initialValue: true,
+		}),
+		defineField({
 			name: 'title',
 			type: 'string',
 		}),
@@ -39,4 +44,14 @@ export const embeddedPlayerItem = defineType({
 			type: 'text',
 		}),
 	],
+	preview: {
+		select: {
+			title: 'title',
+			enabled: 'enabled',
+		},
+		prepare: ({ title, enabled }) => ({
+			title,
+			subtitle: !enabled && 'Disabled',
+		}),
+	},
 })

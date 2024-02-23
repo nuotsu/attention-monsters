@@ -1,18 +1,25 @@
-<section class="relative">
-	<div class="section grid grid-cols-2 gap-4 md:gap-8 max-md:carousel">
-		{#each items as item}
-			<article class="shrink-0" style="--size: min(88vw, 300px)">
+<div
+	class="gap-4 sm:gap-8 carousel before:m-auto after:m-auto"
+	style:--cols={items.filter((item) => item.enabled).length}
+>
+	{#each items as item}
+		{#if item.enabled}
+			<article
+				class="shrink-0 md:[--max:640px]"
+				style:--size="min(88vw, var(--max, 300px))"
+			>
 				<h2 class="sr-only">{item.title}</h2>
 
 				{@html item.code}
 			</article>
-		{/each}
-	</div>
-</section>
+		{/if}
+	{/each}
+</div>
 
 <script lang="ts">
 	const { items = [] } = $$props as Partial<{
 		items: {
+			enabled: boolean
 			title: string
 			code: string
 		}[]
