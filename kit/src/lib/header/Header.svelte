@@ -5,7 +5,15 @@
 >
 	<div style:grid-area="logo drop-shadow-md">
 		<a href="/" class="h3 max-sm:h4 text-nowrap">
-			{title}
+			{#if logo}
+				<img
+					class="max-w-[150px]"
+					src={urlFor(logo).width(300).auto('format').url()}
+					alt={title}
+				/>
+			{:else}
+				{title}
+			{/if}
 		</a>
 	</div>
 
@@ -72,8 +80,9 @@
 	import { afterNavigate } from '$app/navigation'
 	import Menu from './Menu.svelte'
 	import Social from '$lib/Social.svelte'
+	import { urlFor } from '$utils/sanity'
 
-	$: ({ title } = $page.data.site)
+	$: ({ title, logo } = $page.data.site)
 
 	let checked = false
 
