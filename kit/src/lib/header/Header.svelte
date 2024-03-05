@@ -7,7 +7,7 @@
 		<a href="/" class="h3 max-sm:h4 text-nowrap">
 			{#if logo}
 				<img
-					class="max-w-[150px]"
+					class="max-w-[100px] sm:max-w-[150px]"
 					src={urlFor(logo).width(300).auto('format').url()}
 					alt={title}
 				/>
