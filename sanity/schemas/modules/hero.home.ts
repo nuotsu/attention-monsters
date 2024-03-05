@@ -25,6 +25,11 @@ export default defineType({
 			],
 		}),
 		defineField({
+			name: 'textShadow',
+			type: 'boolean',
+			initialValue: false,
+		}),
+		defineField({
 			name: 'ctas',
 			title: 'Call-to-actions',
 			type: 'array',

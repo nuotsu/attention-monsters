@@ -12,6 +12,9 @@ export default defineType({
 		defineField({
 			name: 'logo',
 			type: 'image',
+			options: {
+				hotspot: true,
+			},
 		}),
 		defineField({
 			name: 'menu',

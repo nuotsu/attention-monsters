@@ -3,7 +3,7 @@
 		{@const { width, height } = getImageDimensions(image)}
 
 		<img
-			src={urlFor(image).width(1600).auto('format').url()}
+			src={urlFor(image).auto('format').url()}
 			alt={image.alt}
 			{width}
 			{height}

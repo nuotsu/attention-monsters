@@ -22,7 +22,10 @@
 	{/if}
 
 	<div class="relative section w-full max-md:before:backdrop-blur">
-		<div class="max-w-md richtext drop-shadow-xl [&_h1]:text-pretty">
+		<div
+			class="max-w-md richtext drop-shadow-xl [&_h1]:text-pretty"
+			class:textShadow
+		>
 			{#if pretitle}
 				<p class="technical text-xs">{pretitle}</p>
 			{/if}
@@ -60,6 +63,13 @@
 		inset: -3rem 0 0 0;
 		mask-image: linear-gradient(to top, #000e 50%, transparent);
 	}
+
+	.textShadow {
+		text-shadow:
+			0 0.25em 1em #000,
+			0 0.25em 2em #000,
+			0 0.25em 3em #000;
+	}
 </style>
 
 <script lang="ts">
@@ -69,9 +79,10 @@
 	import Countdown from '$lib/Countdown.svelte'
 	import CTAList from '$lib/CTAList.svelte'
 
-	const { pretitle, content, ctas, image } = $$props as Partial<{
+	const { pretitle, content, textShadow, ctas, image } = $$props as Partial<{
 		pretitle: string
 		content: any
+		textShadow: boolean
 		ctas: Sanity.CTA[]
 		image: Sanity.Image
 	}>
