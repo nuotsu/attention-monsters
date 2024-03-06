@@ -89,4 +89,12 @@
 	afterNavigate(() => {
 		checked = false
 	})
+
+	$: {
+		if (typeof window !== 'undefined') {
+			window.addEventListener('scroll', () => {
+				checked = false
+			})
+		}
+	}
 </script>
