@@ -9,6 +9,16 @@
 		{@const { width, height } = getImageDimensions(image)}
 
 		<picture class="absolute inset-0 before:top-0 after:bottom-0">
+			{#if image.mobile}
+				{@const dimensions = getImageDimensions(image.mobile)}
+
+				<source
+					srcset={urlFor(image.mobile).auto('format').url()}
+					media="(max-width: 768px)"
+					{...dimensions}
+				/>
+			{/if}
+
 			<img
 				class="size-full object-cover"
 				{src}
@@ -84,7 +94,9 @@
 		content: any
 		textShadow: boolean
 		ctas: Sanity.CTA[]
-		image: Sanity.Image
+		image: Sanity.Image & {
+			mobile?: Sanity.Image
+		}
 	}>
 
 	const src = image && urlFor(image).auto('format').url()

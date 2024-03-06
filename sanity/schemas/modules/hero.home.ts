@@ -43,6 +43,10 @@ export default defineType({
 					name: 'alt',
 					type: 'string',
 				}),
+				defineField({
+					name: 'mobile',
+					type: 'image',
+				}),
 			],
 		}),
 	],
